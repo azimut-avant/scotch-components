@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import "./SimpleSelect.scss"
 import {SimpleSelectProps} from "./SimpleSelect.types";
 import {ChevronDown, XIcon} from "lucide-react";
@@ -7,21 +7,13 @@ import * as Popover from "@radix-ui/react-popover"
 
 export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true}: SimpleSelectProps) => {
     const [open, setOpen] = useState(false)
-    // const [calcWidth, setWidth] = useState(width)
     const targetRef = useRef(null)
-
-    // useEffect(() => {
-        // if (targetRef.current) {
-        //     setWidth(targetRef.current.offsetWidth + "px");
-        // }
-    // }, [targetRef]);
 
     const handleSelect = (e: React.MouseEvent<Element, MouseEvent>, value: SelectItem) => {
         e.stopPropagation() // Keep the popover open as it is controlled
         onSelect(value);
         setOpen(false);
     }
-
 
     let icon
     if(!value || !nullable){

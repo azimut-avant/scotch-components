@@ -1,26 +1,6 @@
 import {SelectItem} from "../types"
 
-interface SearchSelectPropsNonNullable {
-    /** Array of items */
-    items: SelectItem[],
-
-    /** Function to select item */
-    onSelect: (value: SelectItem) => void,
-
-    /** Current selection */
-    value: SelectItem,
-
-    /** Nullability */
-    nullable: false
-
-    /** Search value */
-    searchValue: string
-
-    /** Hook on search value change */
-    onSearchValueChange: (s: string) => void
-}
-
-interface SearchSelectPropsNullable {
+export interface SearchSelectProps {
     /** Array of items */
     items: SelectItem[],
 
@@ -34,7 +14,7 @@ interface SearchSelectPropsNullable {
     placeholder?: string,
 
     /** Nullability */
-    nullable: true
+    nullable?: boolean
 
     /** Search value */
     searchValue: string
@@ -43,5 +23,4 @@ interface SearchSelectPropsNullable {
     onSearchValueChange: (s: string) => void
 }
 
-export type SearchSelectProps = SearchSelectPropsNullable | SearchSelectPropsNonNullable
 

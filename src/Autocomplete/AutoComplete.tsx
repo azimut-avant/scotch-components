@@ -4,7 +4,7 @@ import {AutoCompleteProps} from "./AutoComplete.types";
 import {XIcon} from "lucide-react";
 import * as Popover from "@radix-ui/react-popover"
 
-export const AutoComplete = ({items, placeholder, nullable=true, ...props}: AutoCompleteProps) => {
+export const AutoComplete = ({items, placeholder, ...props}: AutoCompleteProps) => {
     const targetRef = useRef(null)
     const inputRef = useRef(null)
     const [searchActive, setSearchActive] = useState(false)

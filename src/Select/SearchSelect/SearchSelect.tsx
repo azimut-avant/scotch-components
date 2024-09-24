@@ -5,7 +5,7 @@ import {ChevronDown, XIcon} from "lucide-react";
 import {SelectItem} from "../types";
 import * as Popover from "@radix-ui/react-popover"
 
-export const SearchSelect = ({items, value, onSelect, placeholder, nullable=true, ...props}: SearchSelectProps) => {
+export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: SearchSelectProps) => {
     const targetRef = useRef(null)
     const [searchActive, setSearchActive] = useState(false)
 
@@ -50,7 +50,7 @@ export const SearchSelect = ({items, value, onSelect, placeholder, nullable=true
                             className={"scotch-select-search-input-input"}
                             onChange={e => props.onSearchValueChange(e.target.value)}
                             value={!searchActive && value?.label ? value?.label : props.searchValue}
-                            placeholder={value ? '' : value?.label.toString()}
+                            placeholder={value ? props.placeholder : value?.label.toString()}
                             onFocus={() => onStartSearch()}
                         />
                     </div>

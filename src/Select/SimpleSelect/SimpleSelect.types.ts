@@ -1,21 +1,6 @@
-import React, {ReactNode} from "react";
 import {SelectItem} from "../types"
 
-interface SimpleSelectPropsNonNullable {
-    /** Array of items */
-    items: SelectItem[],
-
-    /** Function to select item */
-    onSelect: (value: SelectItem) => void,
-
-    /** Current selection */
-    value: SelectItem,
-
-    /** Nullability */
-    nullable: false
-}
-
-interface SimpleSelectPropsNullable {
+export interface SimpleSelectProps {
     /** Array of items */
     items: SelectItem[],
 
@@ -29,8 +14,7 @@ interface SimpleSelectPropsNullable {
     placeholder?: string,
 
     /** Nullability */
-    nullable: true
+    nullable?: boolean
 }
 
-export type SimpleSelectProps = SimpleSelectPropsNullable | SimpleSelectPropsNonNullable
 

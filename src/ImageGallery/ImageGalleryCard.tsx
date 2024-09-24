@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss"
-import {ImageGalleryCardProps} from "ImageGallery.types";
+import {ImageGalleryCardProps} from "./ImageGallery.types";
 
 export const ImageGalleryCard = (props: ImageGalleryCardProps) => {
     let grid = "auto 50px"
