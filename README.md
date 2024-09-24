@@ -1,4 +1,4 @@
-# @scotch/scotch-components
+# @azimut-avant/scotch-components
 Scotch is our internal collection of libraries used for frontend development. 
 In this repository we publish some components which might be useful as an extension
 for awesome **@radix-ui** and **@shadcn/ui**.
