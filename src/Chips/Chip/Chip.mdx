@@ -1,0 +1,22 @@
+import {Canvas, Meta, Primary, Controls, Markdown} from "@storybook/blocks"
+import * as ChipStories from "./Chip.stories.tsx"
+import Styling from "./Styling.md?raw"
+
+<Meta of={ChipStories} />
+
+# Chip
+Chip is a small extension of Badge which allows to use actions.
+
+## Props
+<Controls />
+
+## Styling
+You have two options to style the chip:
+1. Pass `className` prop
+2. Overload CSS classes:
+<Markdown>{Styling}</Markdown>
+
+
+## Example
+<Canvas of={ChipStories.ChipExample} />
+<Canvas of={ChipStories.ChipAction} />

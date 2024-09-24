@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+@import "../../styles/variables";
+
+.scotch-chip-wrapper{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px;
+  border: thin solid lightgray;
+  border-radius: var(--scotchBorderRadius);
+  height: 20px;
+}
+
+.scotch-chip-content{
+  cursor: inherit;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 6px;
+}
+
+.scotch-chip-actions{
+  display: flex;
+}
