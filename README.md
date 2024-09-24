@@ -6,6 +6,8 @@ for awesome **@radix-ui** and **@shadcn/ui**.
 > Out desire is not implementation of a complete library, but just presentation of some components which might 
 > be useful for anyone else.
 
+Demo: https://scotch-components.vercel.app/
+
 # Components
 | Name      | Description                        |
 |-----------|------------------------------------|

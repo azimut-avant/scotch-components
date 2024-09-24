@@ -1,5 +1,5 @@
 {
-  "name": "@scotch/scotch-components",
+  "name": "@azimut-avant/scotch-components",
   "version": "0.0.1",
   "description": "A collection of Headless React Components",
   "main": "dist/index.js",
@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "url": "https://github.com/azimut-avant/scotch-components"
+  },
   "author": "shtrikh17",
   "license": "MIT",
   "devDependencies": {
