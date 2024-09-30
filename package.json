@@ -1,6 +1,6 @@
 {
   "name": "@azimut-avant/scotch-components",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A collection of Headless React Components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -73,6 +73,7 @@
     "@mdi/react": "^1.6.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.1",
+    "@radix-ui/react-popper": "^1.2.0",
     "@radix-ui/react-tooltip": "^1.1.2",
     "lucide-react": "^0.445.0"
   }

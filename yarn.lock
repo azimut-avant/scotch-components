@@ -35,6 +35,7 @@ __metadata:
     "@mdi/react": "npm:^1.6.1"
     "@radix-ui/react-dialog": "npm:^1.1.1"
     "@radix-ui/react-popover": "npm:^1.1.1"
+    "@radix-ui/react-popper": "npm:^1.2.0"
     "@radix-ui/react-tooltip": "npm:^1.1.2"
     "@rollup/plugin-commonjs": "npm:^25.0.8"
     "@rollup/plugin-node-resolve": "npm:^15.3.0"
@@ -2806,7 +2807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-popper@npm:1.2.0":
+"@radix-ui/react-popper@npm:1.2.0, @radix-ui/react-popper@npm:^1.2.0":
   version: 1.2.0
   resolution: "@radix-ui/react-popper@npm:1.2.0"
   dependencies:

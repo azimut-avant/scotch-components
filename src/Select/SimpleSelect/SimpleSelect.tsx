@@ -29,8 +29,9 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
         />
     }
 
-    return <div className={"scotch-select-simple"} ref={targetRef}>
-        <Popover.Root open={open} onOpenChange={() => setOpen(false)} >
+    return <div className={"scotch-select-simple"} >
+        <div style={{pointerEvents: "auto"}} ref={targetRef}></div>
+        <Popover.Root open={open} onOpenChange={setOpen} >
             <Popover.Trigger style={{display: 'none'}}/>
             <Popover.Anchor asChild>
                 <div className={"scotch-select-simple-input"} onClick={() => setOpen(x=>!x)} >

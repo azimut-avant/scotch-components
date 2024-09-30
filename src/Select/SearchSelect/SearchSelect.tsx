@@ -40,11 +40,12 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
         />
     }
 
-    return <div className={"scotch-select-search"} ref={targetRef}>
-        <Popover.Root open={searchActive && !!items.length} onOpenChange={() => setSearchActive(false)} >
+    return <div className={"scotch-select-search"}>
+        <div style={{pointerEvents: "auto"}} ref={targetRef}></div>
+        <Popover.Root open={searchActive && !!items.length} onOpenChange={setSearchActive} >
             <Popover.Trigger style={{display: 'none'}}/>
             <Popover.Anchor asChild>
-                <div className={"scotch-select-search-input"} onClick={() => setSearchActive(x=>!x)} >
+                <div className={"scotch-select-search-input"} onClick={() => setSearchActive(true)} >
                     <div className={"scotch-select-search-input-value"}>
                         <input
                             className={"scotch-select-search-input-input"}
@@ -57,7 +58,7 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
                     {icon}
                 </div>
             </Popover.Anchor>
-            <Popover.Portal>
+            <Popover.Portal container={targetRef.current} >
                 <Popover.Content
                     className={"scotch-select-search-popover"}
                     onOpenAutoFocus={e => {
