@@ -41,7 +41,7 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
                     {icon}
                 </div>
             </Popover.Anchor>
-            <Popover.Portal>
+            <Popover.Portal container={targetRef.current}>
                 <Popover.Content className={"scotch-select-simple-popover"}>
                     <div>
                         {items.map(x => <div

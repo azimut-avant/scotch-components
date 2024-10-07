@@ -131,14 +131,17 @@ export const ImageGalleryModal = (props: ImageGalleryModalProps) => {
                 </div>
 
                 <div className="scotch-image-gallery-modal-thumbnails">
-                    {thumbnailsToShow.map((image, index) => <img
+                    {thumbnailsToShow.map((image, index) => <div
                             key={index}
-                            src={image.src}
-                            alt={`Thumbnail ${props.currentIndex}`}
                             className={`scotch-image-gallery-modal-thumbnail`}
                             data-selected={index + start === props.currentIndex}
                             onClick={() => props.onIndexChange(index)}
-                        />
+                        >
+                            <img
+                                src={image.src}
+                                alt={`Thumbnail ${props.currentIndex}`}
+                            />
+                        </div>
                     )}
                 </div>
             </div>

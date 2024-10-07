@@ -69,15 +69,21 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: white;
+  background-color: var(--scotchBackgroundColor);
   padding: 2px;
   width: 25px;
   height: 25px;
   border-radius: var(--scotchBorderRadius);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
   svg{
     cursor: pointer;
     &:hover{
-      color: var(--primaryColor);
+      color: var(--scotchPrimaryColor);
     }
   }
 }
@@ -86,7 +92,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: white;
+  background-color: var(--scotchBackgroundColor);
   border-radius: var(--scotchBorderRadius);
   padding: 10px;
   min-width: 200px;
@@ -125,13 +131,13 @@
   margin-top: 10px;
   padding: 5px 2px;
 
-  background-color: white;
+  background-color: var(--scotchBackgroundColor);
   border-radius: var(--scotchBorderRadius);
   svg{
     cursor: pointer;
     border-radius: var(--scotchBorderRadius);
     &:hover{
-      background-color: var(--primaryColor);
+      background-color: var(--scotchPrimaryColor);
       color: white;
     }
   }
@@ -162,8 +168,16 @@
   max-height: 100px;
   transition: opacity 0.2s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: white;
 
   &[data-selected=true]{
     border: 2px solid deepskyblue;
+  }
+
+  img{
+    max-height: 100%;
+    max-width: 100%;
   }
 }

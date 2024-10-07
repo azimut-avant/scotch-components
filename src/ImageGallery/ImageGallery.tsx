@@ -17,6 +17,10 @@ export const ImageGallery = (props: ImageGalleryProps) => {
         return props.items.some(x => !!x.bar)
     }, [props.items])
 
+    const hasCaption = React.useMemo(() => {
+        return props.items.some(x => !!x.caption)
+    }, [props.items])
+
     return <div>
         <ImageGalleryModal
             items={props.items}
@@ -32,8 +36,9 @@ export const ImageGallery = (props: ImageGalleryProps) => {
                 src={x.src}
                 bar={x.bar || (hasBar ? <div></div> : null)}
                 onClick={() => onSelect(i)}
-                caption={x.caption}
+                caption={x.caption || (hasCaption ? <div></div> : null)}
                 key={`image-${i}`}
+                gridRows={x.gridRows}
             />)}
         </div>
     </div>
