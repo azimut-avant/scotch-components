@@ -33,7 +33,8 @@ export const AutoComplete = ({items, placeholder, ...props}: AutoCompleteProps) 
         />
     }
 
-    return <div className={"scotch-autocomplete"} ref={targetRef}>
+    return <div className={"scotch-autocomplete"}>
+        <div style={{pointerEvents: "auto"}} ref={targetRef}></div>
         <Popover.Root open={searchActive && !!items.length} onOpenChange={() => setSearchActive(false)} >
             <Popover.Trigger style={{display: 'none'}}/>
             <Popover.Anchor asChild>
