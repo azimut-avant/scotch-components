@@ -52,7 +52,7 @@ export const AutoComplete = ({items, placeholder, ...props}: AutoCompleteProps) 
                     {icon}
                 </div>
             </Popover.Anchor>
-            <Popover.Portal>
+            <Popover.Portal  container={targetRef.current}>
                 <Popover.Content
                     className={"scotch-autocomplete-popover"}
                     onOpenAutoFocus={e => {

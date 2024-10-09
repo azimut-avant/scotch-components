@@ -1,4 +1,5 @@
 @import "../Chip/Chip";
+@import "../../Select/style";
 
 .scotch-chip-input{
   width: 100%;
@@ -8,15 +9,18 @@
 }
 
 .scotch-chip-input-area{
+  @extend ._scotch-select-input;
   width: 100%;
   display: flex;
   gap: 5px;
   align-items: center;
   input{
+    background-color: inherit;
+    border: none;
     width: 100%;
+    outline: none;
   }
   margin-bottom: 10px;
-
 }
 
 .scotch-chip-input-icon{
